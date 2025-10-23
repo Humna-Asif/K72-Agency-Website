@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+/*===Custome Fonts===*/
+
+@font-face {
+  font-family: font1;
+  src: url(../fonts/Lausanne-300.woff2);
+}
+
+
+@font-face {
+  font-family: font2;
+  src: url(../fonts/Lausanne-500.woff2);
+}
+
+/* FullScreenNav Hover Scrolling Animation  */
+
+@keyframes moveAnimation {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.moveLink {
+  opacity: 0;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.link:hover .moveLink {
+  opacity: 1;
+  transition: all ease;
+}
+
+.moveX {
+  animation-name: moveAnimation;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  will-change: transform;
+}
+
+/*/////===== Agence Page ScrollingText=====///// */
+
+
+/* ====Top Scrooling Text====*/
+
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.scrolling-top {
+  display: flex;
+  width: max-content;
+  animation: moveLeftToRight 8s linear infinite;
+  will-change: transform;
+}
+
+
+/* ====Bottom Scrooling Text====*/
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.scrolling-bottom {
+  display: flex;
+  width: max-content;
+  animation: moveRight 6s linear infinite;
+  will-change: transform;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
