@@ -28,7 +28,7 @@ const Agence = () => {
     '/team/12.jpg',
     '/team/13.jpg',
     '/team/14.jpg',
-  ]
+  ];
 
   // GSAP Animations
   gsap.registerPlugin(ScrollTrigger)
